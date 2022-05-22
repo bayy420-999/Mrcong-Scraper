@@ -13,15 +13,13 @@ def clear(numlines=100):
 def generate_urls(tag, page_count):
     base_url = f'https://mrcong.com/tag/{tag}'
     urls = [base_url]
-    for i in range(2, page_count + 1):
-        urls.append(f'{base_url}/page/{i}')
+    urls.extend(f'{base_url}/page/{i}' for i in range(2, page_count + 1))
     return urls
 
 def parse(pattern, html):
     results = []
     for url in html:
-        for url in re.findall(pattern, url):
-            results.append(url)
+        results.extend(iter(re.findall(pattern, url)))
     return results
 
 async def get_html(url, session):
