@@ -71,7 +71,7 @@ def main():
     html = asyncio.run(make_session(urls))
     results = parse(pattern, html)
 
-    with open(filename, 'w') as outfile:
+    with open(f'results/{filename}', 'w') as outfile:
         for url in results:
             outfile.write(f'{url}\n')
 
