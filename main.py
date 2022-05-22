@@ -70,12 +70,14 @@ def main():
     start = perf_counter()
     html = asyncio.run(make_session(urls))
     results = parse(pattern, html)
+
     with open(filename, 'w') as outfile:
         for url in results:
             outfile.write(f'{url}\n')
 
     end = perf_counter()
     time_consumed = end - start
+
     print(f'Total items scraped: {len(results)}
     print(f'Results saved to {filename}')
     print(f'Time consumed: {time_consumed}')
