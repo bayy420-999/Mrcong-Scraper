@@ -47,4 +47,11 @@ which is used to get all download url inside class `shortc-button medium`
 
 
 
-You can type `1` in terminal to use pattern 1, and type `2` to use pattern 2
+You can type `1` in terminal to use pattern 1, or type `2` to use pattern 2
+After that, you will prompted with 
+```
+Input filename to store the results:
+```
+You can input whatever filename you want, don't forget to add `.txt` after the filename 
+
+All results will be saved in `results` folder 
