@@ -76,7 +76,7 @@ def main():
 
     end = perf_counter()
     time_consumed = end - start
-
+    print(f'Total items scraped: {len(results)}
     print(f'Results saved to {filename}')
     print(f'Time consumed: {time_consumed}')
 
